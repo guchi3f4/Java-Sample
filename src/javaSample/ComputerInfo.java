@@ -12,7 +12,7 @@ public class ComputerInfo {
 		// TODO 自動生成されたメソッド・スタブ
 		Computer desktop = new Computer();
 		desktop.os = "Windows 10";
-        desktop.memory = 4;
+        desktop.memory = 5;
         desktop.storage = 256;
         
         System.out.println("OS：" + desktop.os);
