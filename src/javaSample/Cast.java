@@ -40,13 +40,19 @@ public class Cast {
 		//ダウンキャスト
 		dog = (Dog) animal;
 		animal.name = "犬";
+		System.out.println(dog.name);
 		
 		//例外が表示される記述
-//		Animal animal = new Animal();
-//		Dog dog = (Dog) animal;
-//		dog.name = "犬";
 		
-		System.out.println(dog.name);
+//		Animal animal2 = new Animal();
+//		Dog dog2 = (Dog) animal2;
+//		dog2.name = "チワワ";
+//		System.out.println(dog2.name);
+		
+//		Dog dog2 = new Dog();
+//		dog2 = (Dog)new Animal();
+//		dog2.name = "ポメラニアン";
+//		System.out.println(dog2.name);
 		
 
 	}
