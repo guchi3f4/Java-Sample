@@ -5,6 +5,9 @@ class Animal {
 }
 
 class Dog extends Animal {	
+	public boolean equals(Dog obj) {
+		return this.name == obj.name;
+	}
 }
 
 public class Cast {
