@@ -39,6 +39,10 @@ class Staff {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	public int test(double a, int b) {
+		return (int) a + b;
+	}
 }
 
 class RemoteStaff extends Staff {
@@ -49,6 +53,9 @@ class RemoteStaff extends Staff {
 		// TODO 自動生成されたコンストラクター・スタブ
 	}
 	
+	public int test(double aa, int bb) {
+		return (int) aa + bb;
+	}
 }
 
 public class StaffInfo {
@@ -70,5 +77,4 @@ public class StaffInfo {
 		System.out.println("メールアドレス：" + tanaka.getEmail());
 		System.out.println("勤務地：" + tanaka.location);
 	}
-
 }
