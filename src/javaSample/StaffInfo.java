@@ -64,7 +64,7 @@ public class StaffInfo {
 		// TODO 自動生成されたメソッド・スタブ
 		Staff yamada = new Staff("Taro Yamada", 12345, "a@a");
 		RemoteStaff tanaka = new RemoteStaff("Hnako Tanaka", 22345, "b@b");
-		tanaka.location = "大阪";
+		tanaka.location = "東京";
 		
 		System.out.println("[社員情報]");
 		System.out.println("指名：" + yamada.getName());
