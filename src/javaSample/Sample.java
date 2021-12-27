@@ -12,12 +12,26 @@ public class Sample {
 		//同一性、同値性
 		Dog dog3 = new Dog();
 		Dog dog4 = new Dog();
+		Animal dog5 = new Dog();
+		
+		String a = "a";
+		String b = "a";
+		
+		System.out.println(a == b);
+		
 		System.out.println(dog3 == dog4);
 		System.out.println(dog3.equals(dog4));
+		
+		System.out.println(dog3 == dog5);
+		System.out.println(dog3.equals(dog5));
 		
 		dog4 = dog3;
 		System.out.println(dog3 == dog4);
 		System.out.println(dog3.equals(dog4));
+		
+		dog3 = (Dog) dog5;
+		System.out.println(dog3 == dog5);
+		System.out.println(dog3.equals(dog5));
 
 	}
     private static void hello(String str) {
