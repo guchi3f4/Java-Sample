@@ -33,6 +33,14 @@ public class SampleA {
 		a_b.print();
 		//b_a.print();
 		b_b.print();
+		
+		//繰り返し処理
+		for(int i = 0; i < 5; i++) {
+			for(i = 5; i < 10; i++) {
+				System.out.print(i);
+			}
+		}
+		
 	}
 
 }
