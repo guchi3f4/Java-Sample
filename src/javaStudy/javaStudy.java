@@ -3,8 +3,24 @@ package javaStudy;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
+import java.util.function.Supplier;
+
+class Parent {
+	void set(Collection<String> c) {
+		
+	}
+}
+
+class Child extends Parent {
+	void method(Map<Integer, String> m) {
+		set(m.values());
+	}
+}
 
 class Sample {
 	int num;
@@ -24,7 +40,14 @@ class Sample {
 }
 
 public class javaStudy {
+	static void print(String[] str) {
+		for(String s : str) {
+			System.out.println(s);
+		}
+	}
+	
 	public static void main (String[] args) {
+		print(args);
 		
 		//Listと配列の違い
 		String[] list1 = new String[3]; //配列の大きさを変えることはできない
@@ -74,5 +97,39 @@ public class javaStudy {
 				System.out.print(b);
 			}
 		}
+		
+		String[] str1 = { "A", "B" };
+		List<String> str2 = Arrays.asList("A", "B");
+		List<String> str3 = new ArrayList<>(Arrays.asList("A", "B"));
+		str3.set(1, "C");
+		str3.add(1, "B");
+		
+		System.out.println(str1); //ハッシュコードを表示
+		System.out.println(str2);
+		System.out.println(str3);
+		
+		StringBuilder str4 = new StringBuilder("A");
+		str4.insert(0, "B");
+		str4.append("C");
+		str4.replace(0, 1, "b");
+		System.out.println(str4);
+		
+		String str5 = "BBB";
+		str5 = str5.replace('B', 'b');
+		System.out.println(str5);
+		System.out.println(str5.substring(1));
+		
+		
+		int i = 4;
+		Supplier<Integer> s = () -> i;
+		//i++; コンパイルエラー　変数iは実質的にfinalとなるため変更を加えるとエラー
+		
+		int[] int1 = { 1,2,3 };
+		int[] int2 = { 1,2,2 };
+		System.out.println(Arrays.compare(int1, int2));
+		
+		str2.forEach( f -> System.out.print(f) );
+		str3.forEach( System.out::print );
+		
 	}
 }
