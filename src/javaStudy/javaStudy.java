@@ -8,7 +8,6 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
-import java.util.function.Supplier;
 
 class Parent {
 	void set(Collection<String> c) {
@@ -37,9 +36,46 @@ class Sample {
 		}
 		return num;
 	}
+	
+	int returnValue(String str) {
+		if (str.equals("OK")) {
+			return 10;
+		}
+		return 20;
+	}
+}
+
+abstract class Abstract1 {
+	protected abstract void doTest();
+	protected void doProcess() {
+		
+	}
+}
+
+class Sample2 extends Abstract1 {
+	public void doTest() {
+		
+	}
+	public void doProcess() { //オーバーライド
+		
+	}
+	
+	public void doProcess(int num) { //オーバーロード
+		
+	}
+	
+	public String doProcess(String str) { //戻り値の型が違うため、オーバーロードではない
+		return str;
+	}
 }
 
 public class javaStudy {
+	static int num4;
+	
+	static {
+		num4 = 10;
+	}
+	
 	static void print(String[] str) {
 		for(String s : str) {
 			System.out.println(s);
@@ -48,6 +84,11 @@ public class javaStudy {
 	
 	public static void main (String[] args) {
 		print(args);
+		
+		System.out.println(num4);
+		int num4 = 4;
+		System.out.println(num4);
+		System.out.println(javaStudy.num4);
 		
 		//Listと配列の違い
 		String[] list1 = new String[3]; //配列の大きさを変えることはできない
@@ -121,15 +162,41 @@ public class javaStudy {
 		
 		
 		int i = 4;
-		Supplier<Integer> s = () -> i;
+//		Supplier<Integer> s = () -> i;
 		//i++; コンパイルエラー　変数iは実質的にfinalとなるため変更を加えるとエラー
 		
 		int[] int1 = { 1,2,3 };
 		int[] int2 = { 1,2,2 };
+		
 		System.out.println(Arrays.compare(int1, int2));
 		
 		str2.forEach( f -> System.out.print(f) );
 		str3.forEach( System.out::print );
+		
+		Sample sample2 = new Sample();
+		System.out.println();
+		System.out.println(sample2.returnValue("O"));
+		
+		long num2 = (int)'a';
+		char char1 = 'b';
+		char1 = (char)num2;
+		
+		int x;
+		int y = 2;
+		if(y < 3 ) {
+			x = 1;
+			y = 2;
+		} else {
+			x = 1; //コメントアウトするとコンパイルエラー：変数xが初期化されない可能性があるため
+			y = 1;
+		}
+		System.out.println(x +","+ y);
+		
+		int[] numArray1 = new int[2];
+		System.out.println(numArray1[0]);
+		
+		Integer integer1 = Integer.valueOf("10");
+		System.out.println(integer1);
 		
 	}
 }
