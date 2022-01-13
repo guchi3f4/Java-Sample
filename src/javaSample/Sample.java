@@ -16,8 +16,11 @@ public class Sample {
 		
 		String a = "a";
 		String b = "a";
+		String c =  new String("a");
 		
 		System.out.println(a == b);
+		System.out.println(a == c);
+		System.out.println(a.equals(c));
 		
 		System.out.println(dog3 == dog4);
 		System.out.println(dog3.equals(dog4));

@@ -22,7 +22,7 @@ class Child extends Parent {
 }
 
 class Sample {
-	int num;
+	static int num;
 	
 	int getError() {
 		try {
@@ -76,6 +76,10 @@ public class javaStudy {
 		num4 = 10;
 	}
 	
+	javaStudy() {
+		javaStudy.num4 = 30;
+	}
+	
 	static void print(String[] str) {
 		for(String s : str) {
 			System.out.println(s);
@@ -87,6 +91,7 @@ public class javaStudy {
 		
 		System.out.println(num4);
 		int num4 = 4;
+		
 		System.out.println(num4);
 		System.out.println(javaStudy.num4);
 		
@@ -143,7 +148,7 @@ public class javaStudy {
 		List<String> str2 = Arrays.asList("A", "B");
 		List<String> str3 = new ArrayList<>(Arrays.asList("A", "B"));
 		str3.set(1, "C");
-		str3.add(1, "B");
+		str3.add(2, "B");
 		
 		System.out.println(str1); //ハッシュコードを表示
 		System.out.println(str2);
@@ -198,5 +203,30 @@ public class javaStudy {
 		Integer integer1 = Integer.valueOf("10");
 		System.out.println(integer1);
 		
+		int[][] intArray1 = new int[2][3];
+		intArray1[0] = new int[] {1, 2, 3, 4, 5};
+//		intArray1[0][0] = 2;
+		for (int[] a : intArray1) {
+			for (int b : a) {
+				System.out.print(b);
+			}
+		}
+		System.out.println();
+		
+		float cc = 1.0f;
+		int dd = 10;
+		cc = 10L;
+		
+		char ch1 = 101;
+		int in1 = 101;
+		short sh2 = 101;
+		ch1 = (char)sh2;
+		
+//		aa = (char)bb;
+		System.out.println(ch1);
+		
+		new javaStudy();
+		System.out.println(javaStudy.num4);
+		System.out.println(Math.random());
 	}
 }
