@@ -222,7 +222,6 @@ public class javaStudy {
 		short sh2 = 101;
 		ch1 = (char)sh2;
 		
-//		aa = (char)bb;
 		System.out.println(ch1);
 		
 		new javaStudy();
