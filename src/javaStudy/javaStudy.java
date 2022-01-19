@@ -226,6 +226,5 @@ public class javaStudy {
 		
 		new javaStudy();
 		System.out.println(javaStudy.num4);
-		System.out.println(Math.random());
 	}
 }
