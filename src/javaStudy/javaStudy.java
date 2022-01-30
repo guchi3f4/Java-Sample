@@ -219,7 +219,7 @@ public class javaStudy {
 		
 		char ch1 = 101;
 		int in1 = 101;
-		short sh2 = 101;
+		short sh2 = 102;
 		ch1 = (char)sh2;
 		
 		System.out.println(ch1);
