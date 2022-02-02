@@ -213,9 +213,9 @@ public class javaStudy {
 		}
 		System.out.println();
 		
-		float ee = 1.0f;
+		float eee = 1.0f;
 		int dd = 10;
-	    ee = 10L;
+	    eee = 10L;
 		
 		char ch1 = 101;
 		int in1 = 101;
